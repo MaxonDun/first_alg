@@ -75,45 +75,45 @@ while True:
             igrok = igrok + kard_in_int([koloda.pop()])
         try:
             while True:
-                inp = int(input(f'Ваши очки: {igrok} Берем еще? [1-Да , 0-Нет]'))
+                inp = int(input(f'Ваши очки: {igrok} Берем еще? [1-Да , 0-Нет]\n'))
                 if inp == 1:
                     igrok = igrok + kard_in_int([koloda.pop() ])
                     if sum_of_el(igrok) >= 21:
-                        print('Раскроем карты!')
+                        print('Раскроем карты!\n')
                         break
                 else:
-                    print('Раскроем карты!')
+                    print('Раскроем карты!\n')
                     inp = 0
                     break
         except ValueError:
-            print("Вы должны ввести 0 или 1!")
+            print("Вы должны ввести 0 или 1!\n")
         if sum_of_el(igrok) < 22 and sum_of_el(komp) < 22:
             if sum_of_el(igrok) > sum_of_el(komp):
                 inp = input(f'{name}! ВЫ ПОБЕДИЛИ! Результат: Игрок:{sum_of_el(igrok)} Компьютер:{sum_of_el(komp)} \n'
-                            f'Будем играть еще? [1-Да , 0-Нет] ')
+                            f'Будем играть еще? [1-Да , 0-Нет]\n')
                 break
             elif sum_of_el(igrok) < sum_of_el(komp):
                 inp = input(f'{name}! ВЫ ПРОИГРАЛИ! Результат: Игрок:{sum_of_el(igrok)} Компьютер:{sum_of_el(komp)} \n'
-                            f'Будем играть еще? [1-Да , 0-Нет]')
+                            f'Будем играть еще? [1-Да , 0-Нет]\n')
                 break
             else:
                 inp = input(f'{name}! Ничья! Результат: Игрок:{sum_of_el(igrok)} Компьютер:{sum_of_el(komp)}\n'
-                            f'Будем играть еще? [1-Да , 0-Нет]')
+                            f'Будем играть еще? [1-Да , 0-Нет]\n')
                 break
         elif sum_of_el(igrok) >= 22 and sum_of_el(komp) >= 22:
             inp = input(f'{name}! Ничья! Результат: Игрок:{sum_of_el(igrok)} Компьютер:{sum_of_el(komp)}\n'
-                        f'Будем играть еще? [1-Да , 0-Нет]')
+                        f'Будем играть еще? [1-Да , 0-Нет]\n')
             break
         if sum_of_el(igrok) >= 22 and sum_of_el(komp) < 22:
             inp = input(f'{name}! Вы проиграли! Результат: Игрок:{sum_of_el(igrok)} Компьютер:{sum_of_el(komp)}  \n'
-                        f'Будем играть еще? [1-Да , 0-Нет]')
+                        f'Будем играть еще? [1-Да , 0-Нет]\n')
             break
         elif sum_of_el(igrok) < 22 and sum_of_el(komp) >= 22:
             inp = input(f'{name}! Вы выирали! Результат: Игрок:{sum_of_el(igrok)} Компьютер:{sum_of_el(komp)}  \n'
-                        f'Будем играть еще? [1-Да , 0-Нет]')
+                        f'Будем играть еще? [1-Да , 0-Нет]\n')
             break
     if int(inp) == 1:
-        print('Поехали!')
+        print('Поехали!\n')
     else:
         print("Досвидания!")
         break
