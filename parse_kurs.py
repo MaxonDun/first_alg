@@ -22,5 +22,8 @@ def parse(url,path):
 url = 'https://www.banki.ru/products/currency/usd/'
 path = 'kurs.txt'
 while True:
-    parse(url,path)
+    try:
+        parse(url,path)
+    except:
+        print('Неудалось получить данные')
     time.sleep(7) #Ставим сколько надо
